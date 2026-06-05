@@ -1,0 +1,192 @@
+.templates-panel {
+  background: rgba(6, 8, 9, 0.85);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(200, 165, 90, 0.08);
+  padding: 24px;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px));
+  position: relative;
+  margin-top: 24px;
+}
+
+.templates-panel h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-shadow: 0 0 8px rgba(200, 165, 90, 0.4);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(200, 165, 90, 0.2);
+  text-transform: uppercase;
+}
+
+.template-save-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.template-save-row input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: rgba(10,14,18,0.9);
+  color: var(--text);
+  border-radius: 2px;
+}
+
+.btn-template-save {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  padding: 7px 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  clip-path: polygon(2px 0, 100% 0, calc(100% - 2px) 100%, 0 100%);
+  transition: all 0.2s;
+}
+
+.btn-template-save:hover:not(:disabled) {
+  background: rgba(200,165,90,0.08);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+
+.btn-template-save:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.template-save-row input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.template-save-status {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border-radius: 2px;
+  white-space: nowrap;
+  margin-left: 8px;
+  animation: statusPop 0.2s ease-out;
+}
+
+@keyframes statusPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.template-status-success {
+  color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+.template-status-error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.2);
+}
+
+.templates-empty {
+  color: var(--muted);
+  font-style: italic;
+  margin: 18px 0;
+}
+
+.templates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.template-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(6,8,9,0.6);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 12px 14px;
+  transition: background 0.18s;
+}
+
+.template-item:hover {
+  background: rgba(200,165,90,0.05);
+}
+
+.template-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.template-name {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--gold2);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.template-preview {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.template-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.btn-template-load {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  padding: 6px 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  clip-path: polygon(2px 0, 100% 0, calc(100% - 2px) 100%, 0 100%);
+  transition: all 0.2s;
+}
+
+.btn-template-load:hover {
+  background: rgba(200,165,90,0.08);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+
+.btn-template-delete {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  background: transparent;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btn-template-delete:hover {
+  background: rgba(192,57,43,0.08);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(192,57,43,0.18);
+}

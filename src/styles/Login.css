@@ -1,0 +1,171 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  padding: 20px;
+  position: relative;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 460px;
+  background-color: rgba(10, 14, 18, 0.95);
+  border: 1px solid rgba(200, 165, 90, 0.18);
+  padding: 48px 40px;
+  text-align: center;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  box-shadow: 0 0 80px rgba(200, 165, 90, 0.12), inset 0 1px 0 rgba(200, 165, 90, 0.08);
+  position: relative;
+  animation: panelIn 0.6s ease;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, var(--gold) 0%, transparent 100%);
+}
+
+.login-header {
+  margin-bottom: 40px;
+}
+
+.login-logo {
+  font-size: 72px;
+  margin-bottom: 24px;
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+.login-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0 0 16px 0;
+  font-size: 48px;
+  color: var(--gold);
+  letter-spacing: 8px;
+  text-shadow: 0 0 12px rgba(200, 165, 90, 0.3), 0 0 30px rgba(200, 165, 90, 0.15);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.login-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  font-family: 'Share Tech Mono', monospace;
+  text-transform: uppercase;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.login-description {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.btn-google {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 100%);
+  color: var(--bg);
+  border: none;
+  border-radius: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px));
+  box-shadow: 0 0 20px rgba(200, 165, 90, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+}
+
+.btn-google:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(200, 165, 90, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn-google:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-error {
+  background-color: rgba(192, 57, 43, 0.15);
+  border: 1px solid var(--danger);
+  border-radius: 0;
+  padding: 12px;
+  color: #ff9999;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.login-error strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--danger);
+}
+
+.login-footer {
+  border-top: 1px solid rgba(200, 165, 90, 0.1);
+  padding-top: 20px;
+}
+
+.login-footer p {
+  margin: 6px 0;
+  font-size: 10px;
+  color: var(--muted);
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+.login-footer p:first-child {
+  margin-top: 0;
+}
+
+.login-footer p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 40px 28px;
+  }
+
+  .login-header {
+    margin-bottom: 32px;
+  }
+
+  .login-logo {
+    font-size: 56px;
+  }
+
+  .login-header h1 {
+    font-size: 36px;
+    letter-spacing: 5px;
+  }
+
+  .btn-google {
+    padding: 12px 20px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,266 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.landing-nav a {
+  margin-left: 16px;
+}
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  gap: 24px;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(200, 165, 90, 0.3);
+}
+
+.hero-tagline {
+  font-size: 24px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0;
+}
+
+.hero .btn-large {
+  margin-top: 16px;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 40px;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(200, 165, 90, 0.2);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--accent);
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Donation Section */
+.donation {
+  padding: 60px 40px;
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.donation h2 {
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.donation > p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+.donation-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.donation-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.donation-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.donation-card strong {
+  display: block;
+  color: var(--accent);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.donation-card p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+.donation-card.esewa {
+  cursor: default;
+}
+
+.donation-card.esewa:hover {
+  transform: none;
+}
+
+/* Footer */
+.landing-footer {
+  padding: 24px 40px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-surface);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.landing-footer a {
+  margin-left: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing-header {
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+  }
+
+  .features,
+  .donation {
+    padding: 40px 20px;
+  }
+
+  .features h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .donation h2 {
+    font-size: 22px;
+  }
+
+  .features-grid {
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 16px;
+  }
+
+  .donation-methods {
+    gap: 16px;
+  }
+
+  .landing-footer {
+    padding: 16px 20px;
+  }
+
+  .landing-footer a {
+    display: block;
+    margin: 8px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-tagline {
+    font-size: 14px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-methods {
+    grid-template-columns: 1fr;
+  }
+}

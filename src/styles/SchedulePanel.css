@@ -1,0 +1,172 @@
+.schedule-panel {
+  background: rgba(6, 8, 9, 0.85);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(200, 165, 90, 0.08);
+  padding: 24px;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px));
+  position: relative;
+}
+
+.schedule-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--gold) 0%, transparent 100%);
+}
+
+.schedule-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-shadow: 0 0 8px rgba(200, 165, 90, 0.4);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(200, 165, 90, 0.2);
+}
+
+.schedule-panel .form-group {
+  margin-bottom: 16px;
+}
+
+.schedule-panel input[type="datetime-local"],
+.schedule-panel textarea {
+  width: 100%;
+  background-color: rgba(6, 8, 9, 0.9);
+  clip-path: polygon(0 0, calc(100% - 2px) 0, 100% 2px, 100% 100%, 0 100%);
+}
+
+.schedule-panel .btn-primary {
+  width: 100%;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.scheduled-list {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(200, 165, 90, 0.2);
+}
+
+.scheduled-list h4 {
+  margin-bottom: 12px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+}
+
+.scheduled-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: rgba(15, 21, 32, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  margin-bottom: 8px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1px), 1px 100%, 0 100%);
+}
+
+.scheduled-info {
+  flex: 1;
+}
+
+.scheduled-time {
+  font-size: 11px;
+  color: var(--gold);
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0 0 4px 0;
+}
+
+.scheduled-preview {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.scheduled-item button {
+  margin-left: 12px;
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scheduled-item button:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+  background-color: rgba(192, 57, 43, 0.15);
+  box-shadow: 0 0 12px rgba(192, 57, 43, 0.3);
+}
+
+.recurrence-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.recurrence-btn {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  clip-path: polygon(2px 0, 100% 0, calc(100% - 2px) 100%, 0 100%);
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.recurrence-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(200,165,90,0.08);
+  box-shadow: 0 0 8px rgba(200,165,90,0.2);
+}
+
+.recurrence-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Datetime input styling - BUG 3 fix */
+.datetime-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  background: rgba(10, 14, 18, 0.9);
+  border: 1px solid var(--border);
+  color: #dcddde;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.datetime-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(200, 165, 90, 0.3);
+}
+
+.datetime-input::placeholder {
+  color: var(--muted);
+}
+
